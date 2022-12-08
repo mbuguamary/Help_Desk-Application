@@ -3,6 +3,7 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button,  Form, Input } from 'antd';
 import {Link } from 'react-router-dom';
 import { useState } from 'react';
+import Navbar from '../NavBar/Navbar';
 const onFinish = (values) => {
   console.log('Received values of form: ', values);
 };
@@ -13,8 +14,6 @@ const SignUp = () => {
      setFormData({...formData, [e.target.name]:[e.target.value]})
     }
      function handleSubmitForm(e){
-    //  e.preventDefault();
-    
      console.log(e);
      fetch("http://localhost:3000/signup", {
        method: "POST",
@@ -35,11 +34,11 @@ const SignUp = () => {
 
   return (
     <Form
-    name="normal_login"
-    className="login-form"
-    initialValues={{
-      remember: true,
-    }}
+    //name="normal_login"
+    //className="login-form"
+    //initialValues={{
+     // remember: true,
+   // }}
     form={form}
     onFinish={handleSubmitForm}
     onSubmit={handleSubmitForm}
@@ -87,7 +86,7 @@ const SignUp = () => {
       />
     </Form.Item>
     <Form.Item>
-      <Link to="/">
+      <Link to="/Navbar">
       <Button type="primary" htmlType="submit" className="login-form-button"  >
         Sign in
       </Button>
