@@ -30,25 +30,24 @@ const AddTicketForm = () => {
   }
 
   function handleSubmit(e){
-    //e.preventDefault();
-    console.log(e, " is the data")
-    fetch("http://localhost:3000/tickets",
-    {
-      method:'POST',
+    console.log(e);
+    fetch("http://localhost:3000/tickets", {
+      method: "POST",
       headers: {
-        "Content-Type": "application/json"
-        
-      },
-      body: JSON.stringify(e)
-
+         "Content-Type": "application/json"
+         
+       },
+       body: JSON.stringify(e) 
     })
     .then(res => res.json())
-    .then (data => data
-      )
+    .then(data => {
+      console.log("submitted")
       form.resetFields();
-    
+    })
 
-  }
+    .catch(err => console.log(err.message))
+    }
+
 
 
   return (
