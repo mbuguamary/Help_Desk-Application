@@ -12,6 +12,7 @@ import SignUp from './Components/Authentication/SignUp';
 import TicketList from './Components/Helpdesk/TicketList';
 import CategoryList from './Components/Category/CategoryList';
 import DepartmentList from './Components/Department/DepartmentList';
+import DashBoard from './Components/NavBar/DashBoard';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -26,6 +27,7 @@ root.render(
       <Route path = "/SignUp" element={<SignUp/>}/>
       <Route path = "/CategoryList" element={<CategoryList/>}/>
       <Route path = "/DepartmentList" element={<DepartmentList/>}/>
+      <Route path = "/DashBoard" element={<DashBoard/>}/>
       </Route>
     
     </Routes>
