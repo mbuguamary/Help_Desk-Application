@@ -36,7 +36,7 @@ const DashBoard = () => {
     </div>
     <div className='ptickets'> 
       <h5>Pending Tickets</h5> 
-      <button>View All</button>
+      <button className='but'>View All</button>
      </div>
      <div>
     <table>
