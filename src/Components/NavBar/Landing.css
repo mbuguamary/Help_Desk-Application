@@ -1,0 +1,38 @@
+.nav{
+    background-color: black;
+}
+.color{
+    background-color: grey;
+}
+.center{
+    display: flex;
+    text-align: center;
+    flex-direction: column; 
+    justify-items: center; 
+    padding-top: 100px;
+}
+.buttons{
+    display: flex;
+    text-align: center;
+    flex-direction: row; 
+    justify-items: center; 
+    padding-top: 10px;
+    padding-left: 200px;
+}
+.button{
+  width: 100px;
+}
+h3{
+    margin-right: 10px;
+    
+}
+.page{
+    height: 100;
+}
+footer{
+    background-color: black;
+    color: skyblue;
+    height: 90px;
+}
+
+
