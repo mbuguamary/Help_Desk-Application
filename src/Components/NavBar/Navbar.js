@@ -16,17 +16,17 @@ const Navbar = () => (
       <NavLink    style={{
           padding: '0 24px 24px', float: 'Left'
         }} >Metro Help Desk</NavLink>
-      <NavLink to="/AddTicketForm" style={{
+      <NavLink to="/DashBoard" style={{
           padding: '0 24px 24px',
-        }}>Home</NavLink>
+        }}>Dashboard</NavLink>
       
       
       <NavLink to="/Login" style={{
           padding: '0 24px 24px', float: 'right'
         }}>Login</NavLink>
     </Header>
-    <Layout>
-      <Sider width={200} className="site-layout-background">
+    <Layout >
+      <Sider width={200}  className="site-layout-background">
         <Menu 
           mode="inline"
           //defaultSelectedKeys={['1']}
@@ -39,7 +39,7 @@ const Navbar = () => (
           
         >
           
-          <Menu style={{ padding: '0'}}>Settings
+          <Menu style={{ marginTop: '20px'}}>Settings
          
           <Menu.Item> 
            <Link to="/Category"> Register Category </Link>
@@ -76,6 +76,7 @@ const Navbar = () => (
       <Layout
         style={{
           padding: '0 24px 24px',
+         
         }}
       >
         
@@ -85,10 +86,11 @@ const Navbar = () => (
             padding: 24,
             margin: 0,
             minHeight: 280,
+           
           }}
         >
           
-          <Outlet/>
+          <Outlet />
 
         </Content>
       </Layout>
