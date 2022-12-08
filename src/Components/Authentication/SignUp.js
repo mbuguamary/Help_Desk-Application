@@ -16,7 +16,7 @@ const SignUp = () => {
     //  e.preventDefault();
     
      console.log(e);
-     fetch("http://localhost:3000/users", {
+     fetch("http://localhost:3000/signup", {
        method: "POST",
        headers: {
           "Content-Type": "application/json"
@@ -40,7 +40,9 @@ const SignUp = () => {
     initialValues={{
       remember: true,
     }}
-    onFinish={onFinish}
+    form={form}
+    onFinish={handleSubmitForm}
+    onSubmit={handleSubmitForm}
   >
     <Form.Item
       name="email"
