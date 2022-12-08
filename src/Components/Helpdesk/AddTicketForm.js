@@ -1,6 +1,7 @@
 import React from 'react'
-import { Form, Input, InputNumber } from 'antd';
+import { Form, Input,Select } from 'antd';
 import { useState } from 'react';
+const { Option } = Select;
 const layout = {
   labelCol: {
     span: 8,
@@ -31,12 +32,12 @@ const AddTicketForm = () => {
   function handleSubmit(e){
     //e.preventDefault();
     console.log(e, " is the data")
-    fetch("/tickets",
+    fetch("http://localhost:3000/tickets",
     {
       method:'POST',
       headers: {
-        "Content-Type": "application/json",
-        "accept":"application/json"
+        "Content-Type": "application/json"
+        
       },
       body: JSON.stringify(e)
 
@@ -55,7 +56,7 @@ const AddTicketForm = () => {
       <h3>Welcome to the IT Help Desk</h3>
       <h4>Submit your ticket to IT</h4>
     <Form  form={form} {...layout} name="nest-messages" onFinish={handleSubmit} validateMessages={validateMessages} onSubmit={handleSubmit}>
-      <Form.Item
+      {/* <Form.Item
         name="email"
         label="Email"
         rules={[
@@ -65,15 +66,19 @@ const AddTicketForm = () => {
         ]}
       >
         <Input  onChange={handleChange} />
-      </Form.Item>
+      </Form.Item> */}
       <Form.Item name="name" label="Name">
         <Input  onChange={handleChange}/>
       </Form.Item>
-      <Form.Item name="department" label="Department">
-        <Input  onChange={handleChange}/>
+      <Form.Item name="department_id" label="Department">
+      <Select placeholder="Select department">
+              <Option value="Nursing">Nursing</Option>
+              <Option value="Accounts">Accounts</Option>
+             
+            </Select>
       </Form.Item>
       <Form.Item
-        name="phone ext"
+        name="phone_no"
         label="Phone/Extension Number"
         rules={[
           {
@@ -100,10 +105,25 @@ const AddTicketForm = () => {
       <Form.Item name="description" label="Description">
         <Input  onChange={handleChange}/>
       </Form.Item>
-      <Form.Item name="description" label="Description">
-        <Input  onChange={handleChange}/>
+      <Form.Item name="category_id" label="Category">
+      <Select placeholder="Select category">
+              <Option value="Network Issues">Network issues</Option>
+              <Option value="Printer Errors">Printer errors</Option>
+              <Option value="Software bug">Software bug</Option>
+            </Select>
       </Form.Item>
-      
+      <Form.Item name="priority" label="Priority">
+      <Select placeholder="Select priority">
+              <Option value="High">High</Option>
+              <Option value="Medium">Medium</Option>
+              <Option value="Low">Low</Option>
+            </Select>
+      </Form.Item>
+      <Form.Item name="status" label="Status">
+      <Select placeholder="Status">
+              <Option value="Open">Open</Option>
+            </Select>
+      </Form.Item>
       <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
         <button type="primary" htmlType="submit" >
           Submit
