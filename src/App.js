@@ -1,14 +1,15 @@
 
 import './App.css';
+import Category from './Components/Category/Category';
+import Department from './Components/Department/Department';
 import AddTicketForm from './Components/Helpdesk/AddTicketForm';
+
 import Navbar from './Components/NavBar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>testing</h1>
-      <Navbar/>
-      <AddTicketForm/>
+      <Navbar/>  
     </div>
   );
 }
