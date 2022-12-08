@@ -13,12 +13,12 @@ const LandingPage = () => {
         }} >Metro Help Desk</NavLink>
       <NavLink to="/DashBoard" style={{
           padding: '0 24px 24px',float: 'right'
-        }}>Contact Us</NavLink>
+        }}>Login</NavLink>
       
       
       <NavLink to="/Login" style={{
           padding: '0 24px 24px', float: 'right'
-        }}>Login</NavLink> 
+        }}>Contact Us</NavLink> 
     </nav>
     </div>
     <div className='color'>
