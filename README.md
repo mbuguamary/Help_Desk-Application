@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Metro Help Desk
+# Portfolio
+# By Mary Mbugua
+<p>This is a website where users can login and raise ticket for issues encountered at the work place.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Content
++ [Description]
++ [Features]
++ [Installation-Requirement]
++ [Technology-Used]
++ [Future-development]
++ [Licence]
++ [Authors-Info]
+## Description
+<p>This is a help desk app where users can login and raise ticket for issues encountered at the work place</p>
 
-## Available Scripts
+## Features
++ Register issue Category
++ Register Department
++ Raise Ticket
++ Reports
+  + registered departments
+  + registered categories
+  + raised tickets
++ Dashboard
 
-In the project directory, you can run:
 
-### `npm start`
+## Installation
++ Requirements
++ Either a computer,phone,tablet or an Ipad
++ An access to the Internet
++ Git clone https://github.com/mbuguamary/Help_Desk-Application
++ live demo click[here] https://mbuguamary.github.io/Sacco-App/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Used
++ React - which was used to build the structure of the pages.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
++ CSS - which was used to style the pages incuding the left aside navigation bar.
++ Javascript- which adds functionalty to the website.
++ Ruby on rails - used to create the backend end points
++ postgresql - holds the backend and needs to be running for the website to work.
 
-### `npm test`
+## future Development
++ have a  responsive dashboard
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Backend
+## Technology Used
++ (RUBY ON RAILS) - Used on the backend for Active Records-based API development.
+* Ruby version 2.74
+## Database
++ postgresql
+## Models
+* Tickets
+* Departments
+* Categories
++ ActiveRecord will manage the database relatonships.
 
-### `npm run build`
+## migrations
++ tickets
++ departments
++ categories
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ROUTES Methods and Actions
+## GET
++ /tickets: returns all tickets with specified columns
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
++ /tickets/:id: returns a specific ticket
++  /users/:id: returns a specific user
++ /categories: returns all categories
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
++ /departments: returns all departments
 
-### `npm run eject`
+## PATCH
++ /tickets/:id: updates a specific ticket
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## POST
++ /tickets/: creates a new department
++ /tickets/: creates a new ticket
++ /tickets/: creates a new category
++ /users/ : creates a new user
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## DELETE
++ /tickets/:id: deletes a specific ticket
+/users/:id: deletes a session
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Licence
+<p>MIT License</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p>Copyright (c) [2022] [Mary Wairimu Mbugua]</p>
 
-## Learn More
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 
-### Code Splitting
+## Authors Info
++ Slack Profile -Mary Mbugua
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
++ Linkedin - Mary Mbugua
