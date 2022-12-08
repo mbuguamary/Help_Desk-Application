@@ -8,6 +8,28 @@ const onFinish = (values) => {
   console.log('Received values of form: ', values);
 };
 const Login = () => {
+  const [form] = Form.useForm();
+  function handleSubmitForm(e){
+    //  e.preventDefault();
+    
+     console.log(e);
+     fetch("http://localhost:3000/login", {
+       method: "POST",
+       headers: {
+          "Content-Type": "application/json"
+          
+        },
+        body: JSON.stringify(e) 
+     })
+     .then(res => res.json())
+     .then(data => {
+       console.log("submitted")
+       form.resetFields();
+     })
+
+     .catch(err => console.log(err.message))
+     }
+
 return (
   <Form
     name="normal_login"
