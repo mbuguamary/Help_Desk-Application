@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Help_Desk-Application/static/css/main.07589a4d.css",
+    "main.js": "/Help_Desk-Application/static/js/main.8221f0fd.js",
+    "static/js/787.79121550.chunk.js": "/Help_Desk-Application/static/js/787.79121550.chunk.js",
+    "index.html": "/Help_Desk-Application/index.html",
+    "main.07589a4d.css.map": "/Help_Desk-Application/static/css/main.07589a4d.css.map",
+    "main.8221f0fd.js.map": "/Help_Desk-Application/static/js/main.8221f0fd.js.map",
+    "787.79121550.chunk.js.map": "/Help_Desk-Application/static/js/787.79121550.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07589a4d.css",
+    "static/js/main.8221f0fd.js"
+  ]
+}
