@@ -1,89 +1,57 @@
 import React from 'react'
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { useState } from 'react';
+
 import SignUp from './SignUp';
-import {Link } from 'react-router-dom';
+import {Link,useNavigate } from 'react-router-dom';
 
-const onFinish = (values) => {
-  console.log('Received values of form: ', values);
-};
-const Login = () => {
-  const [form] = Form.useForm();
-  function handleSubmitForm(e){
-    //  e.preventDefault();
-    
-     console.log(e);
-     fetch("http://localhost:3000/login", {
-       method: "POST",
-       headers: {
-          "Content-Type": "application/json"
-          
-        },
-        body: JSON.stringify(e) 
-     })
-     .then(res => res.json())
-     .then(data => {
-       console.log("submitted")
-       form.resetFields();
-     })
 
-     .catch(err => console.log(err.message))
-     }
+const Login = (setUser) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    }).then((r) => {
+      if (r.ok) {
+       // r.json().
+      
+       //then((user) => setUser(user));
+       alert("Login Successfull")
+        navigate('/app')
+      }
+    });
+  }
 
-return (
-  <Form
-    name="normal_login"
-    className="login-form"
-    initialValues={{
-      remember: true,
-    }}
-    onFinish={onFinish}
-  >
-    <Form.Item
-      name="username"
-      rules={[
-        {
-          required: true,
-          message: 'Please input your Username!',
-        },
-      ]}
-    >
-      <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
-    </Form.Item>
-    <Form.Item
-      name="password"
-      rules={[
-        {
-          required: true,
-          message: 'Please input your Password!',
-        },
-      ]}
-    >
-      <Input
-        prefix={<LockOutlined className="site-form-item-icon" />}
-        type="password"
-        placeholder="Password"
-      />
-    </Form.Item>
-    <Form.Item>
-      <Form.Item name="remember" valuePropName="checked" noStyle>
-        <Checkbox>Remember me</Checkbox>
-      </Form.Item>
+  return (
+    <div>
+      <form className='frm' onSubmit={handleSubmit}>
+        <h1>Login</h1>
+        <label htmlFor="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          autoComplete="off"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          autoComplete="current-password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button className='btns' type="submit">Login</button>
+      </form>
+    </div>
+  );
 
-      <a className="login-form-forgot" href="">
-        Forgot password
-      </a>
-    </Form.Item>
-
-    <Form.Item>
-      <Link to="/">
-      <Button type="primary" htmlType="submit" className="login-form-button"  >
-        Log in
-      </Button>
-      </Link>
-      Or<Link to="/SignUp">  <a href="">register now!</a> </Link>
-    </Form.Item>
-  </Form>
-);
     }
 export default Login
