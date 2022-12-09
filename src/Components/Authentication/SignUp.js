@@ -1,13 +1,13 @@
 import React from 'react'
-import {Link } from 'react-router-dom';
-import { useState } from 'react';
+import {Link, useNavigate } from 'react-router-dom';
+import { useState} from 'react';
 import Navbar from '../NavBar/Navbar';
 
 const SignUp = (setUser) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-
+  const navigate = useNavigate();
   function handleSubmit(e) {
     e.preventDefault();
     fetch("http://localhost:3000/signup", {
@@ -23,6 +23,7 @@ const SignUp = (setUser) => {
     }).then((r) => {
       if (r.ok) {
         alert("Registration Successfull")
+        navigate('/app')
         // r.json().then((user) => setUser(user));
       }
     });
