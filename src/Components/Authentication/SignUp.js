@@ -1,100 +1,65 @@
 import React from 'react'
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button,  Form, Input } from 'antd';
 import {Link } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from '../NavBar/Navbar';
-const onFinish = (values) => {
-  console.log('Received values of form: ', values);
-};
-const SignUp = () => {
-  const [form] = Form.useForm();
-  const [formData,setFormData] = useState({});
-  function handleChangeForm (e){
-     setFormData({...formData, [e.target.name]:[e.target.value]})
-    }
-     function handleSubmitForm(e){
-     console.log(e);
-     fetch("http://localhost:3000/signup", {
-       method: "POST",
-       headers: {
-          "Content-Type": "application/json"
-          
-        },
-        body: JSON.stringify(e) 
-     })
-     .then(res => res.json())
-     .then(data => {
-       console.log("submitted")
-       form.resetFields();
-     })
 
-     .catch(err => console.log(err.message))
-     }
+const SignUp = (setUser) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("http://localhost:3000/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+        password_confirmation: passwordConfirmation,
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        alert("Registration Successfull")
+        // r.json().then((user) => setUser(user));
+      }
+    });
+  }
 
   return (
-    <Form
-    //name="normal_login"
-    //className="login-form"
-    //initialValues={{
-     // remember: true,
-   // }}
-    form={form}
-    onFinish={handleSubmitForm}
-    onSubmit={handleSubmitForm}
-  >
-    <Form.Item
-      name="email"
-      rules={[
-        {
-          required: true,
-          message: 'Please input your Email!',
-        },
-      ]}
-    >
-      <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Email" />
-    </Form.Item>
-    <Form.Item
-      name="password"
-      rules={[
-        {
-          required: true,
-          message: 'Please input your Password!',
-        },
-      ]}
-    >
-      <Input
-        prefix={<LockOutlined className="site-form-item-icon" />}
-        type="password"
-        placeholder="Password"
-      />
-    </Form.Item>
-    
-    <Form.Item
-      name="password_confirmation"
-      rules={[
-        {
-          required: true,
-          message: 'Please Confirm Password!',
-        },
-      ]}
-    >
-      <Input
-        prefix={<LockOutlined className="site-form-item-icon" />}
-        type="password"
-        placeholder="Confirm Password"
-      />
-    </Form.Item>
-    <Form.Item>
-      <Link to="/Navbar">
-      <Button type="primary" htmlType="submit" className="login-form-button"  >
-        Sign in
-      </Button>
-      </Link>
-     
-    </Form.Item>
-  </Form>
-  )
+    <div>
+      <form className='frm' onSubmit={handleSubmit}>
+        <h1>Sign Up</h1>
+        <label htmlFor="username">Email</label>
+        <input
+          type="text"
+          id="email"
+          autoComplete="off"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          autoComplete="current-password"
+        />
+        <label htmlFor="password">Password Confirmation</label>
+        <input
+          type="password"
+          id="password_confirmation"
+          value={passwordConfirmation}
+          onChange={(e) => setPasswordConfirmation(e.target.value)}
+          autoComplete="current-password"
+        />
+        <button className='btns' type="submit">Sign Up</button>
+      </form>
+    </div>
+  );
 }
 
 export default SignUp
