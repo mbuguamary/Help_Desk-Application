@@ -8,7 +8,10 @@ import { Link, NavLink, Outlet } from 'react-router-dom';
 const { Header, Content, Sider } = Layout;
 
 
-const Navbar = () => (
+const Navbar = () => {
+
+  return(
+  <div>
   <Layout>
     <Header className="header" >
       <div className="logo"  />
@@ -16,17 +19,16 @@ const Navbar = () => (
       <NavLink    style={{
           padding: '0 24px 24px', float: 'Left'
         }} >Metro Help Desk</NavLink>
-      <NavLink to="/DashBoard" style={{
+      <NavLink to="/app/DashBoard" style={{
           padding: '0 24px 24px',
         }}>Dashboard</NavLink>
       
-      
-      <NavLink to="/Login" style={{
+      <NavLink to="/" style={{
           padding: '0 24px 24px', float: 'right'
-        }}>Login</NavLink>
+        }}>Log Out</NavLink>
     </Header>
     <Layout >
-      <Sider width={200}  className="site-layout-background">
+      <Sider width={180}  className="site-layout-background">
         <Menu 
           mode="inline"
           //defaultSelectedKeys={['1']}
@@ -42,29 +44,29 @@ const Navbar = () => (
           <Menu style={{ marginTop: '20px'}}>Settings
          
           <Menu.Item> 
-           <Link to="/Category"> Register Category </Link>
+           <Link to="/app/Category"> Register Category </Link>
            </Menu.Item>
            <Menu.Item>
-           <Link to="/Department"> Register Department</Link>
+           <Link to="/app/Department"> Register Department</Link>
           </Menu.Item>
           </Menu>
           <Menu>Tickets
           <Menu.Item> 
-           <Link to="/AddTicketForm"> Raise Ticket </Link>
+           <Link to="/app/AddTicketForm"> Raise Ticket </Link>
            </Menu.Item>
            <Menu.Item> 
-           <Link to="/TicketList">View Raised Tickets </Link>
+           <Link to="/app/TicketList">View Raised Tickets </Link>
            </Menu.Item>
           </Menu>
           <Menu>Reports
           <Menu.Item> 
-          <Link to="/DepartmentList">Department list </Link>
+          <Link to="/app/DepartmentList">Department list </Link>
            </Menu.Item>
            <Menu.Item> 
-           <Link to="/CategoryList">Category List </Link>
+           <Link to="/app/CategoryList">Category List </Link>
            </Menu.Item>
            <Menu.Item> 
-           <Link to="/TicketList">Resolved Tickets </Link>
+           <Link to="/app/TicketList">Resolved Tickets </Link>
            </Menu.Item>
             </Menu> 
           </Menu>
@@ -96,6 +98,8 @@ const Navbar = () => (
       </Layout>
     </Layout>
   </Layout>
-);
+  </div>
+  )
+};
 
 export default Navbar;
