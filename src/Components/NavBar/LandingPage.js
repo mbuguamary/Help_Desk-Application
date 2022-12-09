@@ -23,7 +23,7 @@ const LandingPage = () => {
     </div>
     <div className='color'>
     <div className='center'>
-        <h2>Welcome to Metro Help desk</h2>
+        <h2>Welcome to Metro Help Desk</h2>
         <h2>How can we help you?</h2>
         </div>
         <div className='buttons'>
