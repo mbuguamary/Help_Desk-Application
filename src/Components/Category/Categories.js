@@ -5,6 +5,7 @@ const Categories = ({id,category_name}) => {
     <tr>
       <td>{id}</td>
       <td>{category_name}</td>
+      <td><button>Delete</button></td>
       
  
     </tr>
