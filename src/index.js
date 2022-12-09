@@ -13,22 +13,27 @@ import TicketList from './Components/Helpdesk/TicketList';
 import CategoryList from './Components/Category/CategoryList';
 import DepartmentList from './Components/Department/DepartmentList';
 import DashBoard from './Components/NavBar/DashBoard';
+import LandingPage from './Components/NavBar/LandingPage';
+import Navbar from './Components/NavBar/Navbar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
-      <Route path ="/" element={<App />}>
-      <Route path ="/AddTicketForm" element={<AddTicketForm/>}/>
-      <Route path ="/TicketList" element={<TicketList/>}/>
-      <Route path ="/Category" element={<Category/>}/>
-      <Route path = "/Department" element={<Department/>}/>
-      <Route path = "/Login" element={<Login/>}/>
+      <Route path ="/" element={<LandingPage />}/>
       <Route path = "/SignUp" element={<SignUp/>}/>
-      <Route path = "/CategoryList" element={<CategoryList/>}/>
-      <Route path = "/DepartmentList" element={<DepartmentList/>}/>
-      <Route path = "/DashBoard" element={<DashBoard/>}/>
-      </Route>
+      <Route path = "/Login" element={<Login/>}/>
+     
+       <Route path="/app" element={<App/>}> 
+      <Route path ="/app/AddTicketForm" element={<AddTicketForm/>}/>
+      <Route path ="/app/TicketList" element={<TicketList/>}/>
+      <Route path ="/app/Category" element={<Category/>}/>
+      <Route path = "/app/Department" element={<Department/>}/>
+      
+      <Route path = "/app/CategoryList" element={<CategoryList/>}/>
+      <Route path = "/app/DepartmentList" element={<DepartmentList/>}/>
+      <Route path = "/app/DashBoard" element={<DashBoard/>}/>
+       </Route> 
     
     </Routes>
     </BrowserRouter>
