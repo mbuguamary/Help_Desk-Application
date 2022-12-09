@@ -30,7 +30,8 @@
 + Either a computer,phone,tablet or an Ipad
 + An access to the Internet
 + Git clone https://github.com/mbuguamary/Help_Desk-Application
-+ live demo click[here] https://mbuguamary.github.io/Sacco-App/
++ live demo click[here] https://mbuguamary.github.io/Help_Desk-Application/
++ backend repo: https://github.com/mbuguamary/help_desk_backend
 
 ## Technology Used
 + React - which was used to build the structure of the pages.
@@ -47,8 +48,12 @@
 ## Technology Used
 + (RUBY ON RAILS) - Used on the backend for Active Records-based API development.
 * Ruby version 2.74
+## Repository
++ repo: https://github.com/mbuguamary/help_desk_backend
 ## Database
 + postgresql
++ email login :terry@gmail.com
++ password :terry12
 ## Models
 * Tickets
 * Departments
@@ -74,10 +79,11 @@
 + /tickets/:id: updates a specific ticket
 
 ## POST
-+ /tickets/: creates a new department
++ /department/: creates a new department
 + /tickets/: creates a new ticket
-+ /tickets/: creates a new category
-+ /users/ : creates a new user
++ /category/: creates a new category
++ /signup/ : creates a new user
++ /login/ : logs in a user 
 
 ## DELETE
 + /tickets/:id: deletes a specific ticket
