@@ -11,30 +11,34 @@ const LandingPage = () => {
     <NavLink style={{
           padding: '0 24px 24px', float: 'Left'
         }} >Metro Help Desk</NavLink>
+        
+         <NavLink style={{
+          textAlign:'center'
+        }} ><Link to="/AddTicketForm">
+        <button className='button3'>Raise Ticket</button>
+        </Link></NavLink>
+        
+         <NavLink style={{
+          padding: '0 24px 24px',float: 'right'
+        }}><Link to="/SignUp">
+        <button className='button1'>Sign In</button>
+        </Link></NavLink> 
+
       <NavLink to="/Login" style={{
           padding: '0 24px 24px',float: 'right'
         }}>Login</NavLink>
       
       
-      <NavLink to="" style={{
-          padding: '0 24px 24px', float: 'right'
-        }}>Contact Us</NavLink> 
+     
     </nav>
     </div>
     <div className='color'>
     <div className='center'>
         <h2>Welcome to Metro Help Desk</h2>
         <h2>How can we help you?</h2>
-        </div>
-        <div className='buttons'>
         <h4 className='signin'>Sign in for expedited support</h4>
-        <Link to="/SignUp">
-        <button className='button1'>Sign In</button>
-        </Link>
-        <Link to ="/Login">
-        <button className='button2'>Sign up</button>
-        </Link>
-    </div>
+        </div>
+        
     <div>
     <h3>Our Products</h3> 
     </div>

@@ -1,5 +1,7 @@
 .nav{
     background-color: black;
+    height: 30px;
+    
 }
 .color{
     background-color: grey;
@@ -17,11 +19,9 @@
     flex-direction: row; 
     justify-items: center; 
     padding-top: 30px;
-    padding-left: 200px;
+    padding-left: 200px; 
 }
-.button{
-  width: 100px;
-}
+
 h3{
     text-align: center;
     margin-right: 10px;
@@ -29,7 +29,8 @@ h3{
     
 }
 .page{
-    height: 100;
+    height:fit-content;
+    flex:1;
 }
 footer{
     background-color: black;
@@ -37,8 +38,10 @@ footer{
     height: 90px;
 }
 .button1,.button2{
-    padding-left: 10px;
+    padding-left: 5px;
     margin-left: 20px;
+   
+    
 }
 .footer{
     padding-top: 20px;
@@ -47,4 +50,9 @@ footer{
 
 .footer1{
     text-align: center;
+}
+.button3{
+    text-align: center;
+    margin-left: 150px;
+    position: fixed;
 }

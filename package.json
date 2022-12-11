@@ -1,7 +1,6 @@
 {
   "name": "help-desk-app",
   "version": "0.1.0",
-  "homepage": "https://mbuguamary.github.io/Help_Desk-Application",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
@@ -16,8 +15,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "PORT=4000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,8 +37,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
+  
 }
