@@ -8,27 +8,33 @@ const LandingPage = () => {
     <div className='page'>
     <div className='nav'>
     <nav>
-    <NavLink style={{
-          padding: '0 24px 24px', float: 'Left'
+    <NavLink className='navlink' style={{
+          padding: '10px 24px 24px', float: 'Left' 
         }} >Metro Help Desk</NavLink>
         
-         <NavLink style={{
-          textAlign:'center'
+         {/* <NavLink style={{
+          padding: '10px 24px 24px',float: 'right'
         }} ><Link to="/AddTicketForm">
         <button className='button3'>Raise Ticket</button>
         </Link></NavLink>
         
          <NavLink style={{
-          padding: '0 24px 24px',float: 'right'
+          padding: '10px 24px 24px',float: 'right' 
         }}><Link to="/SignUp">
         <button className='button1'>Sign In</button>
-        </Link></NavLink> 
-
-      <NavLink to="/Login" style={{
-          padding: '0 24px 24px',float: 'right'
+        </Link></NavLink>  */}
+        
+       
+      <NavLink className='navlink' to="/Login" style={{
+          padding: '10px 24px 24px',float: 'right'
         }}>Login</NavLink>
-      
-      
+          <NavLink className='navlink' to="/SignUp" style={{
+          padding: '10px 24px 24px',float: 'right'
+        }}>Sign In</NavLink>
+      <NavLink className='navlink' to="/AddTicketForm" style={{
+          padding: '10px 24px 24px',float: 'right'
+        }}>Raise Ticket</NavLink>
+        
      
     </nav>
     </div>
@@ -39,7 +45,7 @@ const LandingPage = () => {
         <h4 className='signin'>Sign in for expedited support</h4>
         </div>
         
-    <div>
+    <div className='products'>
     <h3>Our Products</h3> 
     </div>
     <div>
