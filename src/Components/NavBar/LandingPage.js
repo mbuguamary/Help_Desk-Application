@@ -40,12 +40,18 @@ const LandingPage = () => {
     </div>
     <div className='color'>
     <div className='center'>
-        <h2>Welcome to Metro Help Desk</h2>
-        <h2>How can we help you?</h2>
-        <h4 className='signin'>Sign in for expedited support</h4>
+        <h2 className='wel'>Welcome to Metro Help Desk</h2>
+        <h2 className='help'>How can we help you?</h2>
+        <h3 className='signin'>Sign in for expedited support</h3>
+        
+        </div>
+        <div className='butts'>
+        <Link to="/AddTicketForm">
+        <button className='button1'>Get Started</button>
+        </Link>
         </div>
         
-    <div className='products'>
+    {/* <div className='products'>
     <h3>Our Products</h3> 
     </div>
     <div>
@@ -66,8 +72,8 @@ const LandingPage = () => {
         <h4>Hardware support</h4>
         </div>
     </div>
-    </div>
-    </div>
+    </div>*/}
+    </div> 
     <div>
         <footer>
             <h4 className='footer'>Contact us at 071000000</h4>

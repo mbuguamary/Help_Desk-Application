@@ -9,46 +9,49 @@
     
 }
 .color{
+    width:100%;
     background-color: grey;
-    height: 10%
+    height: 30%
 }
 .center{
     display: flex;
     text-align: center;
     flex-direction: column; 
     justify-items: center; 
-    padding-top: 100px; 
+    padding-top: 150px; 
+   
 }
-.buttons{
-    display: flex;
-    text-align: center;
-    flex-direction: row; 
-    justify-items: center; 
-    padding-top: 30px;
-    padding-left: 200px; 
+.button1{
+    
+    background-color: rgb(0, 98, 255);
+    color: aliceblue;
 }
-
+   .wel{
+    font-size: 50px;
+   }
+   .help{
+    font-size: 40px;
+   }
  .signin{
+    font-size: 30px;
     padding-top: 30px;
+    color: white;
  }
-h3{
+ h3{
+  
     text-align: center;
-    margin-right: 10px;
+   
     padding-top: 30px; 
     
 }
-
+.ticket{
+    flex-wrap: wrap; 
+}
 footer{
     background-color: black;
-    color: skyblue;
     height: 12vh;
 }
-.button1,.button2{
-    padding-left: 5px;
-    margin-left: 20px;
-   
-    
-}
+
 .products{
     padding-top: 30px; 
 }
@@ -60,12 +63,20 @@ footer{
 .footer1{
     text-align: center;
 }
- .button3{
-    /* text-align: center; */
-    justify-content: center;
+ .butts{
+     text-align: center; 
+     padding-top: 20px; 
+     
+     color: black;
+     margin-right: 90px;
    
 } 
 .navlink:hover{
   
 color: aliceblue;
 }
+.button1:hover{
+  
+    background-color: aliceblue;
+    color: rgb(0, 98, 255);;
+    }
